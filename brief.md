@@ -20,10 +20,19 @@ An offline-first mobile app stores essential data locally, so users can view inf
 Resource: Android Developers - Build an offline-first app - https://developer.android.com/topic/architecture/data-layer/offline-first
 
 ## Networking
+5G network slicing lets an operator run several core networks at the same time, each specialized for a given set of services or subscribers. An emergency-response slice could be dedicated to responders, so their traffic is handled separately from ordinary subscribers, with the operator configuring its resources and policies to prioritize reliable, low-latency communication. However, slicing alone cannot guarantee service during every outage or disaster.
+
+Resource: 3GPP - 5G System Overview - https://www.3gpp.org/technologies/5g-system-overview
 
 ## Cybersecurity
+NIST SP 800-61 Rev. 3 shows incident response through Detect, Respond and Recover activities. Govern, Identify and Protect help organizations prepare for incidents, but they are not part of the response itself. In a DDoS attack on an emergency service, Detect identifies abnormal traffic, Respond contains the attack (for example, by filtering malicious traffic and prioritizing emergency users), and Recover restores affected services. Lessons learned support continuous improvement across all six CSF 2.0 functions.
+
+Resource: Incident Response | CSRC - https://csrc.nist.gov/projects/incident-response
 
 ## Data
+A star schema has a central fact table that stores measurements and dimension keys, linked directly to dimension tables for filtering and grouping. A snowflake schema normalizes dimensions into several related tables, such as product, subcategory and category. For daily usage reports by region, I would choose a star schema because its simpler structure makes reporting easier to understand and query. Snowflake designs reduce redundancy but can require more joins and a more complex query structure.
+
+Resource: Understand star schema and the importance for Power BI - https://learn.microsoft.com/en-us/power-bi/guidance/star-schema 
 
 ## Misconception in My Track
 
