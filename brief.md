@@ -35,5 +35,7 @@ A star schema has a central fact table that stores measurements and dimension ke
 Resource: Understand star schema and the importance for Power BI - https://learn.microsoft.com/en-us/power-bi/guidance/star-schema 
 
 ## Misconception in My Track
+A common misconception is that an idempotent HTTP method must return the same response every time. In fact, idempotency concerns the intended effect on the server, not the response. For example, a first DELETE request may succeed, while a repeated request may report that the resource is already gone, yet the server state remains the same. This matters for retries after a lost response. RFC 9110, Section 9.2.2 (Idempotent Methods), says a retried idempotent request has the same intended effect, though the response might differ.
 
 ## Open Question
+How should a responder app limit retries while still delivering urgent reports over an unstable connection? I would investigate retry limits, exponential backoff and idempotency keys to reduce duplicate reports without delaying critical information.
